@@ -1,0 +1,241 @@
+/* Importanto fontes da google "Stack Sans Headline" e "Lato"*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #2C5EAD 0%, #1591DC 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.83);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(4.4px);
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    color: #000;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header h2 {
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 4rem;
+}
+
+header p {
+    font-weight: 700;
+    color: #181717;
+    font-size: 1.1rem;
+    margin: auto;
+    width: 80%;
+}
+
+header h2,
+header p {
+    line-height: 2;
+}
+
+/* display hidden css */
+.hide {
+    display: none !important;
+}
+
+#container {
+    background-color: #C4E2F5;
+    color: #000;
+    padding: 1rem;
+    min-width: 600px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* container error */
+#error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f19e9e;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    border: 1px solid red;
+    color: #fff;
+    width: 50%;
+    margin: auto;
+}
+
+#error p:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+#error #height-fail,
+#error #weight-fail {
+    font-size: 1.1rem;
+}
+
+/* container calc */
+#calc-imc-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-operations {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.form-operations label {
+    font-weight: 800;
+    color: #181717;
+    margin-bottom: 5px;
+}
+
+.form-operations input {
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    width: 600px;
+    margin-bottom: 10px;
+
+    &:focus {
+        outline-color: #2C5EAD;
+    }
+}
+
+.form-operations input,
+#form-button button,
+#back-btn {
+    border: none;
+}
+
+#form-button button {
+    color: #181717;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #2C5EAD;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+/* Result calc */
+#result-imc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#imc-header {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#imc-info {
+    font-size: larger;
+}
+
+/* table imc */
+#imc-table {
+    margin: 1.5rem 0;
+    font-size: 0.8rem;
+}
+
+#table-header,
+.table-data-body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #444;
+}
+
+#table-header h4,
+#table-data-body p {
+    flex: 1;
+    font-size: larger;
+}
+
+#table-header h4:nth-child(3),
+#table-data-body p:nth-child(3) {
+    max-width: 80px;
+}
+
+#back-btn {
+    background-color: #FFFBDE;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #fcf7d6;
+    }
+}
+
+span {
+    font-weight: 900;
+}
+.good {
+    color: #12db34;
+    background-color: #1f772e;
+
+}
+
+.low {
+    color: #dbce12;
+    background-color: #86802e;
+}
+
+.medium {
+    color: #db6212;
+}
+
+.high {
+    color: #db1912;
+}
+
+.good, .low {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 2px;
+}

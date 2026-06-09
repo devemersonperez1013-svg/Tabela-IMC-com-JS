@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="./css/imcDesign.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h2>Calcule seu IMC</h2>
+        <p>Usa nossa calculadora de Índice de Massa Corporal, e tenha uma ánalise rápida e prática sobre sua saúde.</p>
+    </header>
+
+    <!-- 1- required HTML, caso usuário apague isso, vai para o 2 -->
+    <!-- 2- required personalizado com JS -->
+    <main id="container">
+        <!-- hidden temporario, depois colocar display none no css -->
+        <section id="error" class="hide">
+            <p>Aviso:</p>
+            <p id="height-fail">Altura é obrigatorio</p>
+            <p id="weight-fail">Peso é obrigatorio</p>
+        </section>
+        <section id="calc-imc-container">
+            <!-- A parte dos inputs -->
+            <form id="imc-form">
+                <section id="form-inputs">
+                    <div class="form-operations">
+                        <label for="Altura">Altura (em cm):</label>
+                        <input type="text" name="altura" id="height" placeholder="Exemplo: 1,70" required>
+                    </div>
+                    <div class="form-operations">
+                        <label for="Peso">Peso (em Kg):</label>
+                        <input type="text" name="peso" id="weight" placeholder="Exemplo: 65" required>
+                    </div>
+                </section>
+                <section id="form-button">
+                    <button id="calc-btn">Calcular</button>
+                </section>
+            </form>
+            <!-- A parte dos resultados -->
+        </section>
+        <section id="result-imc" class="hide">
+            <h3 id="imc-header">Seu IMC é: <span></span></h3>
+            <p id="imc-info">Seu peso é <span></span> para adultos dessa altura!</p>
+            <h3>Confira a interpreteção do IMC</h3>
+            <div id="imc-table">
+                <div id="table-header">
+                    <h4>IMC</h4>
+                    <h4>Classificação</h4>
+                    <h4>Obesidade</h4>
+                </div>
+                <!-- <div class="table-data-body">
+                    <p>Menor que 18,5</p>
+                    <p>Magreza</p>
+                    <p>0</p>
+                </div> -->
+            </div>
+            <button id="back-btn">Voltar</button>
+        </section>
+    </main>
+</body>
+
+</html>
